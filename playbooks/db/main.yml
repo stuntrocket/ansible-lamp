@@ -1,0 +1,29 @@
+---
+- hosts: db
+  become: yes
+
+  vars_files:
+    - vars.yml
+
+  # pre_tasks:
+  #   - name: Create dynamic MySQL variables.
+  #     set_fact:
+  #       mysql_users:
+  #         - name: allround
+  #           host: "{{ groups['lamp_www'][0] }}"
+  #           password: "{{ vault_mysql_admin_password }}"
+  #           priv: "*.*:ALL"
+  #           # priv: "*.*:SELECT"
+  #         - name: admin
+  #           host: "%"
+  #           password: "{{ vault_mysql_admin_password }}"
+  #           priv: "*.*:ALL"
+  # - name: mycompany_user
+  #   host: "{{ groups['lamp_www'][1] }}"
+  #   password: secret
+  #   priv: "*.*:SELECT"
+  # mysql_replication_master: "{{ groups['a4d.lamp.db.1'][0] }}"
+
+  roles:
+    # - geerlingguy.firewall
+    - geerlingguy.mysql

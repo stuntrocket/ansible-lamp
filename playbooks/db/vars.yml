@@ -1,0 +1,29 @@
+---
+# firewall_allowed_tcp_ports:
+#   - "22"
+#   - "3306"
+
+mysql_root_password: "{{ vault_mysql_root_password }}"
+mysql_admin_password: "{{ vault_mysql_admin_password }}"
+
+mysql_replication_user:
+  name: replication
+  password: "{{ mysql_root_password }}"
+
+mysql_databases:
+  - name: stuntrocket
+    encoding: latin1
+    collation: latin1_general_ci
+  - name: allround
+    encoding: latin1
+    collation: latin1_general_ci
+
+mysql_users:
+  - name: admin
+    host: "%"
+    password: "{{ mysql_admin_password}}"
+    priv: "*.*:ALL"
+  - name: allround
+    host: "%"
+    password: "{{ mysql_admin_password}}"
+    priv: "allround.*:ALL"
