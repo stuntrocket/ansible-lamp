@@ -9,7 +9,7 @@ Development of Ansible suite to take over from Chef in provisioning our remote s
 ## Usage
 
 
-## Reference
+## References
 
 - [https://www.virtualbox.org/wiki/Documentation](https://www.virtualbox.org/wiki/Documentation)
 - [https://www.vagrantup.com/docs](https://www.vagrantup.com/docs)
