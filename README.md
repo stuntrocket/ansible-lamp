@@ -1,4 +1,4 @@
-# Ansible LAMP
+# Ansible LAMP with Vagrant
 
 Development of Ansible suite to take over from Chef in provisioning our remote servers.
 
