@@ -16,12 +16,12 @@ end
 
 # Application server
 config.vm.define "app" do |app|
-  app.vm.hostname = "orc-app1.test"
+  app.vm.hostname = "ansible-app.test"
   app.vm.network :private_network, ip: "192.168.70.1"
 end
 
 # Database server
 config.vm.define "db" do |db|
-  db.vm.hostname = "orc-db.test"
+  db.vm.hostname = "ansible-db.test"
   db.vm.network :private_network, ip: "192.168.70.2"
 end end
