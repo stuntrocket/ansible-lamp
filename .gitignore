@@ -24,3 +24,5 @@ roles/**
 *.zip
 *.gzip
 *.tgz
+
+.vault_pass
